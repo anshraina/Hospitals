@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 app.use(express.urlencoded({ extended: false }))
 app.set('view engine', 'ejs')
 app.use(express.json());
-
+require("dotenv").config();
 const hospitalsRouter = require("./routes/hospitals")
 app.use('/api/hospitals', hospitalsRouter)
 
